@@ -14,7 +14,9 @@ export const connect = () => {
         useUnifiedTopology: true,
       },
       () => {
-        console.log('🔥[database]: Database connection established successfully');
+        console.log(
+          '🔥[database]: Database connection established successfully'
+        );
       }
     );
   } catch {
