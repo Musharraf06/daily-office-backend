@@ -1,10 +1,26 @@
 import mongoose from 'mongoose';
 
 const TasksSchema = new mongoose.Schema({
-  name: {
+  title: {
     type: String,
     required: true,
   },
+  startTime: {
+    type: String,
+    required: true,
+  },
+  endTime: {
+    type: String,
+    required: true,
+  },
+  duration: {
+    type: String,
+    required: true,
+  },
+  createdDate: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
-export default mongoose.model("Tasks", TasksSchema);
+export default mongoose.model('Tasks', TasksSchema);
