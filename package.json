@@ -5,7 +5,7 @@
   "scripts": {
     "build": "rimraf dist && tsc",
     "preserve": "npm run build",
-    "serve": "cross-env NODE_ENV=development concurrently \"tsc --watch\" \"nodemon -q dist/server.js\"",
+    "watch": "cross-env NODE_ENV=development concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"blue.bold,green.bold\" \"tsc --watch\" \"nodemon -q dist/server.js\"",
     "prestart": "npm run build",
     "start": "cross-env NODE_ENV=production node dist/server.js"
   },
