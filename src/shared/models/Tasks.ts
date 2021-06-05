@@ -21,6 +21,10 @@ const TasksSchema = new mongoose.Schema({
     type: Date,
     default: new Date(),
   },
+  week: {
+    type: Number,
+    required: true,
+  },
 });
 
 export default mongoose.model('Tasks', TasksSchema);

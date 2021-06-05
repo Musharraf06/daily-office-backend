@@ -7,6 +7,7 @@ interface dataPayload {
   title?: string;
   startTime?: string;
   endTime?: string;
+  week?: number;
 }
 
 export const updateTask = (req: Request, res: Response) => {
