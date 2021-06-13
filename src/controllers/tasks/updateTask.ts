@@ -8,6 +8,10 @@ interface dataPayload {
   startTime?: string;
   endTime?: string;
   week?: number;
+  category?: string;
+  project?: string;
+  clientName?: string;
+  billable?: string;
 }
 
 export const updateTask = (req: Request, res: Response) => {
@@ -17,6 +21,10 @@ export const updateTask = (req: Request, res: Response) => {
     task.startTime = data.startTime;
     task.endTime = data.endTime;
     task.duration = data.duration;
+    task.category = data.category;
+    task.project = data.project;
+    task.clientName = data.clientName;
+    task.billable = data.billable;
     task
       .save()
       .then(() => {

@@ -25,6 +25,22 @@ const TasksSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  category: {
+    type: String,
+    required: true,
+  },
+  project: {
+    type: String,
+    required: true,
+  },
+  clientName: {
+    type: String,
+    required: true,
+  },
+  billable: {
+    type: String,
+    required: true,
+  },
 });
 
 export default mongoose.model('Tasks', TasksSchema);
